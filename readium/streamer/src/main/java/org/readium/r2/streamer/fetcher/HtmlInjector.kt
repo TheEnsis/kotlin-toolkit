@@ -110,7 +110,9 @@ internal class HtmlInjector(
             endHeadIndex += element.length
         }
         resourceHtml = StringBuilder(resourceHtml).insert(endHeadIndex, getHtmlFont(fontFamily = "OpenDyslexic", href = "/assets/fonts/OpenDyslexic-Regular.otf")).toString()
-        resourceHtml = StringBuilder(resourceHtml).insert(endHeadIndex, "<style>@import url('https://fonts.googleapis.com/css?family=PT+Serif|Roboto|Source+Sans+Pro|Vollkorn|Sarabun|Bai+Jamjuree');</style>\n").toString()
+        resourceHtml = StringBuilder(resourceHtml).insert(endHeadIndex, getHtmlFont(fontFamily = "JS Jindara", href = "/assets/fonts/JS Jindara Normal.ttf")).toString()
+        resourceHtml = StringBuilder(resourceHtml).insert(endHeadIndex, getHtmlFont(fontFamily = "Bai+Jamjuree", href = "/assets/fonts/BaiJamjuree-Regular.ttf")).toString()
+        resourceHtml = StringBuilder(resourceHtml).insert(endHeadIndex, "<style>@import url('https://fonts.googleapis.com/css?family=PT+Serif|Roboto|Source+Sans+Pro|Vollkorn|Sarabun');</style>\n").toString()
 
         // Disable the text selection if the publication is protected.
         // FIXME: This is a hack until proper LCP copy is implemented, see https://github.com/readium/r2-testapp-kotlin/issues/266
